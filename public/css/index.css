@@ -1,0 +1,393 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #15161f;
+    color: white;
+}
+
+/* */
+
+header {
+    background-color: #181925;
+    padding: 20px 30px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+header nav .HeaderLinks ul {
+    display: flex;
+    flex-direction: row;
+}
+
+header nav .HeaderLogo {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+
+header nav .HeaderLogo::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: red;
+    transform: scale(0,1);
+    transform-origin: center;
+    transition: transform .25s;  
+}
+  
+header nav .HeaderLogo:hover::after {
+    transform: scale(1,1);
+}
+
+header nav .HeaderLinks ul li {
+    list-style-type: none;
+}
+
+header nav .HeaderLinks ul li a {
+    outline: none;
+    text-decoration: none;
+    color: white;
+    padding: 11.5px 15px;
+    border-radius: 7px;
+    transition: 0.2s all;
+    font-size: 17px;
+}
+
+header nav .HeaderLinks ul li a:hover {
+    transition: 0.2s all;
+    background-color: rgb(95, 6, 197);
+}
+
+header nav .HeaderLinks ul li a:not(:nth-child(0)) {
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 380px) {
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    header nav .HeaderLogo {
+        margin-bottom: 20px;
+        display: none;
+    }
+}
+
+/** */
+
+.SectionMain {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.SectionMain .main {
+    margin: 40px 0;
+}
+
+.SectionMain .main img {
+    border-radius: 100px;
+    border: 10px solid rgba(0,0,0,0.25);
+    width: 200px;
+    height: auto;
+    margin-bottom: 15px
+}
+
+.SectionMain .main .invert:hover, .SectionOwners .owners .owner img:hover {
+    filter: invert(180%);
+}
+
+.SectionMain .main span {
+    font-size: 20px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.SectionMain .main p {
+    color: rgba(204, 204, 204, 0.705);
+    font-size: 14px;
+    margin: 12px 0 35px 0;
+}
+
+.SectionMain .main p:hover {
+    transition: 0.2s all;
+    color: rgba(238, 48, 48, 0.87);
+}
+
+.SectionMain .main a {
+    outline: none;
+    text-decoration: none;
+    color: white;
+    background-color: #2f3463;
+    border-radius: 8px;
+    padding: 15px 40px;
+    transition: 0.2s all;
+}
+
+
+
+.SectionMain .main a:hover {
+    transition: 0.2s all;
+    background-color: rgba(40, 47, 94, 0.925);
+}
+
+/** */
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    transition: 0.3s all;
+    background-color: #0a0a13;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    transition: 0.3s all;
+    background-color: rgba(4, 5, 12, 0.815);
+}
+
+::-webkit-scrollbar-button {
+    display: none
+}
+
+/** */
+
+footer {
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0.5;
+    font-size: 13.5px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 25px;
+}
+
+footer a {
+    color: rgba(238, 48, 48, 0.87);
+    outline: none;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+/** */
+
+.LoginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.LoginForm input {
+    outline: none;
+    text-decoration: none;
+    color: white;
+    background-color: #252b58;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 300px;
+    padding: 10px;
+    transition: 0.2s all;
+    border: 1px solid rgba(26, 31, 63, 0.925);
+    box-shadow: 0 0 20px 1px #04061d;
+}
+
+.LoginForm button {
+    color: white;
+    background-color: #252b58;
+    border-radius: 8px;
+    width: 250px;
+    padding: 10px;
+    transition: 0.2s all;
+    border: 1px solid rgba(26, 31, 63, 0.925);
+    box-shadow: 0 0 20px 1px #04061d;
+    cursor: pointer;
+    margin: 10px 0 20px;
+}
+
+.LoginForm button:hover {
+    transition: 0.2s all;
+    background-color: rgb(95, 6, 197);
+}
+
+/** */
+
+.SectionOwners {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.SectionOwners .owners {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.SectionOwners .owners .owner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #20233a93;
+    width: 35.5em;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px 1px #04061d;
+    transition: 0.2s all;
+    margin: 15px;
+}
+
+.SectionOwners .owners .owner img {
+    border-radius: 100px;
+    border: 10px solid rgba(0,0,0,0.25);
+    width: 130px;
+    height: 120px;
+}
+
+.SectionOwners .owners .owner span {
+    font-size: 20px;
+    margin-top: 20px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.SectionOwners .owners .owner p {
+    color: rgba(204, 204, 204, 0.705);
+    font-size: 14px;
+    margin: 7px 0 0 0;
+}
+
+.SectionOwners .owners .owner a {
+    outline: none;
+    text-decoration: none;
+    color: white;
+    background-color: #2f3463;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 80%;
+    padding: 13px 0;
+    transition: 0.2s all;
+}
+
+.SectionOwners .owners .owner a:hover {
+    box-shadow: 0 0 20px 1px #080811;
+    transition: 0.2s all;
+    background-color: rgb(95, 6, 197);
+}
+
+.SectionOwners .owners .owner:hover {
+    transition: 0.2s all;
+    transform: scale(1.04);
+}
+
+@media only screen and (max-width: 600px) {
+    .SectionOwners .owners .owner {
+        width: 90vmin;
+    }
+
+    .SectionStats .stats .stat {
+        min-width: 90%;
+    }
+}
+
+/** */
+
+.SectionStats {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.SectionStats .stats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.SectionStats .stats .stat {
+    margin: 15px 0;
+    background-color: #20233a93;
+    width: 170px;
+    padding: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 0 20px 1px #04061d;
+    transition: 0.2s all;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.SectionStats .stats .stat:hover {
+    transition: 0.2s all;
+    box-shadow: 0 0 20px 1px #080811;
+    transform: scale(1.05);
+}
+
+.SectionStats .stats .stat span {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.SectionStats .stats .stat p {
+    margin-top: 13px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.SectionStats .SectionTitle p {
+    font-size: 25px;
+    margin-top: 40px;
+    color: #ccc;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+

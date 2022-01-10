@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="shortcut icon" href="" type="image/png"/>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title><%= title %></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <link rel="stylesheet" href="/css/index.css"/>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="" class="HeaderLogo"><span>B4cks0ck</span></a>
+                <div class="HeaderLinks">
+                    <ul class="NavLinks">
+                        <li class="NavLink"><a href="/">Home</a></li>
+                        <li class="NavLink"><a href="/infectados">Infectados</a></li>
+                        <li class="NavLink"><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section class="SectionMain">
+            <div class="main">
+                <div class="items">
+                    <% if(db == null || db == "") { %>
+                      <p>No hay nada en la base de datos</p>
+                    <% } else { %>
+                        <% for(item of db) { %>
+                            <div class="item">
+                                <p>ID: <%= item.id %></p>
+                                <p>Contenido1: <%= item.OneContent %></p>
+                                <p>Contenido2: <%= item.TwoContent %></p>
+                                <p>Contenido3: <%= item.ThreeContent %></p>
+                                <hr>
+                            </div>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+        </section>
+        <footer>
+            Created By<a>:</a> Alk4x<a>/</a> Mr.Char with <a>❤</a>
+        </footer>
+    </body>
+</html>

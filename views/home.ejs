@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="shortcut icon" href="" type="image/png"/>
+        <meta charset="UTF-8"/>
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title><%= title %></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <link rel="stylesheet" href="/css/index.css"/>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="" class="HeaderLogo"><span>B4cks0ck</span></a>
+                <div class="HeaderLinks">
+                    <ul class="NavLinks">
+                        <li class="NavLink"><a href="/">Home</a></li>
+                        <li class="NavLink"><a href="/infectados">Infectados</a></li>
+                        <li class="NavLink"><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section class="SectionStats">
+            <div class="stats">
+                <div class="stat">
+                    <span>Victims</span>
+                    <p><%= db %> users.</p>
+                </div>
+                <div class="stat">
+                    <span>Fecha</span>
+                    <p id="fecha"></p>
+                </div>
+                <div class="stat">
+                    <span>IPv4</span>
+                    <p class="IPv4" id="IPv4"></p>
+                </div>
+            </div>
+        </section>
+        <section class="SectionOwners">
+            <div class="owners">
+                <div class="owner">
+                    <img src="/images/coder.jpg" alt="" srcset="">
+                    <span>Mr. Char</span>
+                    <p>Frontend, Backend Developer</p>
+                    <a target="_blank" href="https://github.com/CodingChar">Follow</a>
+                </div>
+                <div class="owner">
+                    <img src="/images/alk4x.png" alt="" srcset="">
+                    <span>Alk4x</span>
+                    <p>Frontend, Backend, CyberSecurity</p>
+                    <a target="_blank" href="https://github.com/alk4x">Follow</a>
+                </div>
+            </div>
+        </section>
+        <footer>
+            Created By<a>:</a> Alk4x<a>/</a> Mr.Char with <a>❤</a>
+        </footer>
+        <script src="/index.js"></script>
+    </body>
+</html>
