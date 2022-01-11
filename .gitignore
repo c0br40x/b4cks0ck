@@ -1,0 +1,5 @@
+# Gitignore personalizado para Node.js
+
+/node_modules
+
+# Made By: Alk4x
