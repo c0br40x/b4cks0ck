@@ -1,4 +1,4 @@
 {
     "Password": "admin",
-    "MongoURI": "mongodb+srv://admin:admin@xk4t4n4.pwfob.mongodb.net/xk4t4n4?retryWrites=true&w=majority"
+    "MongoURI": ""
 }
