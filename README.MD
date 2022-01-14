@@ -7,6 +7,6 @@
 
 <div id="badges" align="center">
   <img src="https://img.shields.io/github/downloads/c0br40x/b4cks0ck/total?label=Downloads" alt="Descargas">
-  <img src="https://img.shields.io/github/stars/c0br40x/b4cks0ck?label=Stars&style=social" alt="Starts">
+  <img src="https://img.shields.io/github/repo-size/c0br40x/b4cks0ck?label=Size" alt="Size">
   <img src="https://img.shields.io/badge/License-MIT-red" alt="License">
 </div>
