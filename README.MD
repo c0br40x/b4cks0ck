@@ -10,3 +10,12 @@
   <img src="https://img.shields.io/github/repo-size/c0br40x/b4cks0ck?label=Size" alt="Size">
   <img src="https://img.shields.io/badge/License-MIT-red" alt="License">
 </div>
+
+```bf 
+/api/post/params - Post data in MongoDB [Database]
+/ - Home
+/login - Post in Login
+/get/id - Get info in ID
+/infectados - Malware Victims and Info
+/logout - User logout
+```
