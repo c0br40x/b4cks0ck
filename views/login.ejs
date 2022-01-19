@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title><%= title %></title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <link rel="stylesheet" href="/css/index.css"/>
     </head>
@@ -15,8 +17,8 @@
                 <a href="/" class="HeaderLogo"><span>B4cks0ckt</span></a>
                 <div class="HeaderLinks">
                     <ul class="NavLinks">
-                        <li class="NavLink"><a href="/">Home</a></li>
-                        <li class="NavLink"><a href="/infectados">Infectados</a></li>
+                        <li class="NavLink"><a href="/"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+                        <li class="NavLink"><a href="/infectados"><i class="fa-solid fa-biohazard"></i> Infectados</a></li>
                     </ul>
                 </div>
             </nav>
@@ -33,7 +35,25 @@
             </div>
         </section>
         <footer>
-            Created By<a>:</a> Alk4x<a>/</a> Mr.Char with <a>❤</a>
+            Created By<a>:</a> C0br4x<a>/</a> Mr.Char with <a>❤</a>
         </footer>
+        
+        <% if(!session.flash[0]) { %>
+            <div id="session" data-session="no-error"></div>
+        <% } else { %>
+            <div id="session" data-session="<%= session.flash[0].message %>"></div>
+            <% session.flash.pop() %>
+        <% } %>
+        <script>
+            let session = document.getElementById('session').dataset.session;
+            if (session !== 'no-error') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    confirmButtonText: "Vaya...",
+                    text: session,
+                })
+            }
+        </script>
     </body>
 </html>
