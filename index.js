@@ -7,6 +7,7 @@
 const express = require("express")
 const session = require("express-session")
 const { join } = require("path")
+const flash = require("flash")
 const { json, urlencoded } = require("body-parser")
 const { Password, MongoURI } = require("./settings.json") 
 const { connect } = require("mongoose")
@@ -38,6 +39,7 @@ function Index(puerto) {
     APP.use(urlencoded({
         extended: false
     }))
+    APP.use(flash())
     APP.use((request, response, next) => {
         request.pass = Password
         next()
