@@ -15,6 +15,8 @@ const SchemaModel = Schema({
     OneContent: String,
     TwoContent: String,
     ThreeContent: String,
+    Author: String,
+    Fecha: String
 })
 
 /**
