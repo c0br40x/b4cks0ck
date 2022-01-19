@@ -22,7 +22,13 @@ router.get("/post", async(request, response) => {
     const query = request.query
     const data = await database.find()
 
-    if (!query.info1 || !query.info2 || !query.info3) {
+    const date = new Date() 
+    const dia = date.getDay() 
+    const hora = date.getHours()
+    const minutos = date.getMinutes() 
+    const fecha = `${dia}:${hora}:${minutos}` 
+
+    if (!query.info1 || !query.info2 || !query.info3 || !query.author) {
         response.status(400).json({
             success: false.valueOf,
             message: "Necesitas ingresar las query."
@@ -34,6 +40,8 @@ router.get("/post", async(request, response) => {
             OneContent: query.info1,
             TwoContent: query.info2,
             ThreeContent: query.info3,
+            Author: query.author,
+            Fecha: fecha 
         }).save().then(() => {
             response.json({
                 success: true,
@@ -43,20 +51,24 @@ router.get("/post", async(request, response) => {
         })
     }
 })  
-router.get("/get", async(request, response) => {
-    const query = request.query
-    if (!query.id) {
-        response.json(await database.find())
+router.get('/get', async(req, res) => {
+    if(req.session.isAuth == false) return await res.redirect('/');
+    let query = req.query;
+    if(!query.id) {
+        req.flash('error', 'Tienes que seleccionar una id.');
+        return await res.redirect('/infectados');
     } else {
-        const db = await database.findOne({
-            id: query.id
-        })
-        if (!db) return response.send(400).json({
-            success: false,
-            message: "Que raro, esa ID es innexistente"
-        })
-        response.json(db)
-    }
+        if(isNaN(query.id)) {
+            req.flash('error', 'ID Incorrecta.');
+            return await res.redirect('/infectados');
+        } else {
+            let db = await database.findOne({ id: query.id });
+            res.render('infectado', {
+                title: 'B4cks0ck - Infectados',
+                db
+            })
+        }
+    }    
 })
 
 module.exports = router
