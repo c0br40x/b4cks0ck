@@ -3,6 +3,8 @@
     <head>
         <link rel="shortcut icon" href="" type="image/png"/>
         <meta charset="UTF-8"/>
+        <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title><%= title %></title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -11,12 +13,12 @@
     <body>
         <header>
             <nav>
-                <a href="" class="HeaderLogo"><span>B4cks0ck</span></a>
+                <a href="/" class="HeaderLogo"><span>B4cks0ck</span></a>
                 <div class="HeaderLinks">
                     <ul class="NavLinks">
-                        <li class="NavLink"><a href="/">Home</a></li>
-                        <li class="NavLink"><a href="/infectados">Infectados</a></li>
-                        <li class="NavLink"><a href="/logout">Logout</a></li>
+                        <li class="NavLink"><a href="/"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+                        <li class="NavLink"><a href="/infectados"><i class="fa-solid fa-biohazard"></i> Infectados</a></li>
+                        <li class="NavLink"><a href="/logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -29,7 +31,7 @@
                 <div class="items">
                     <hr>
                     <br>
-                    <% if(db == null || db == "") { %>
+                    <% if(db == null || db == "" || !db[0]) { %>
                       <p>No hay nada en la base de datos</p>
                     <% } else { %>
                         <% for(item of db) { %>
@@ -38,6 +40,8 @@
                                 <p>Token: <%= item.OneContent %></p>
                                 <p>IPv4: <%= item.TwoContent %></p>
                                 <p>Info: <%= item.ThreeContent %></p>
+                                <p>Author: <%= item.Author %></p>
+                                <p>Fecha: <%= item.Fecha %></p>
                                 <hr>
                             </div>
                         <% } %>
@@ -46,7 +50,11 @@
             </div>
         </section>
         <footer>
-            Created By<a>:</a> Alk4x<a>/</a> Mr.Char with <a>❤</a>
+            Created By<a>:</a> C0br4x<a>/</a> Mr.Char with <a>❤</a>
         </footer>
+        <script>
+        window.sr = ScrollReveal()
+        sr.reveal(".item")
+        </script>
     </body>
 </html>
