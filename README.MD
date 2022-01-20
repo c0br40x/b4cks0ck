@@ -11,13 +11,13 @@
   <img src="https://img.shields.io/badge/License-MIT-red" alt="License">
 </div>
 
-<br>
+---
 
-```bf 
-/api/post/params - Post data in MongoDB [Database]
-/ - Home
-/login - Post in Login
-/get/id - Get info in ID
-/infectados - Malware Victims and Info
-/logout - User logout
-```
+<div id="captures" align="center">
+  <h3>Login</h3>
+  <img src="https://media.discordapp.net/attachments/858862104709693490/933539886940692480/unknown.png?width=1032&height=559" alt="Login" height="300">
+  <h3>Home</h3>
+  <img src="https://media.discordapp.net/attachments/858862104709693490/933540006444793936/unknown.png?width=1030&height=559" alt="Home" height="300">
+  <h3>Infectados</h3>
+  <img src="https://media.discordapp.net/attachments/858862104709693490/933540197621170176/unknown.png?width=1037&height=559" alt="Infectados" height="300">
+</div>
