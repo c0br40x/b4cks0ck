@@ -21,3 +21,6 @@
   <h3>Infectados</h3>
   <img src="https://media.discordapp.net/attachments/858862104709693490/933540197621170176/unknown.png?width=1037&height=559" alt="Infectados" height="300">
 </div>
+
+---
+
