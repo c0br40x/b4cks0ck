@@ -11,8 +11,6 @@
   <img src="https://img.shields.io/badge/License-MIT-red" alt="License">
 </div>
 
----
-
 <div id="captures" align="center">
   <h3>Login</h3>
   <img src="https://media.discordapp.net/attachments/858862104709693490/933539886940692480/unknown.png?width=1032&height=559" alt="Login" height="300">
